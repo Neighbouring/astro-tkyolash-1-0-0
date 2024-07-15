@@ -1,0 +1,103 @@
+---
+import HeaderLink from './HeaderLink.astro';
+import { SITE_TITLE } from '../consts';
+
+import ImgLogoTokyoLashJP from '../components/imgTokyoLashJP.astro';
+import ImgIcoCursos from '../components/imgIcoHeaderCursos.astro';
+import ImgIcoWA from '../components/imgIcoHeaderWA.astro';
+import ImgIcoIG from '../components/imgIcoHeaderIG.astro';
+
+import BtnWhatsAppJSX from '../componentsJSX/btnWhatsapp.jsx';
+---
+
+<BtnWhatsAppJSX />
+<header>
+	<nav id="navbarHeader">
+
+		<!-- <h2><a href="/">{SITE_TITLE}</a></h2> -->
+		<a href="/"
+		id="imgLogoTokyoLash">
+			<ImgLogoTokyoLashJP/>
+		</a>
+
+		<div class="internal-links">
+			<!-- <HeaderLink href="/">Home</HeaderLink> -->
+			<HeaderLink href="/servicos/lash-lifting">Lash Lifting</HeaderLink>
+			<HeaderLink href="/servicos/extensao-de-cilios">Extensão de Cílios</HeaderLink>
+			<HeaderLink href="/blog">Design de Sobrancelhas</HeaderLink>
+			<!-- <HeaderLink href="/blog">Design de Sobrancelhas</HeaderLink> -->
+			<HeaderLink href="/tokyo-lash">Micropigmentação</HeaderLink>
+		</div>
+		<div class="social-links">
+
+			<a id="navIco" href="https://api.whatsapp.com/send?phone=5511986996217&text=Ol%C3%A1!%20Estava%20aqui%20no%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank">
+				<ImgIcoWA/>
+			</a>
+			<a id="navIco" href="https://www.instagram.com/tokyolashbrasil" target="_blank">
+				<ImgIcoIG/>
+			</a>
+			<a id="navIco" href="https://github.com/withastro/astro" target="_blank">
+				<ImgIcoCursos/>
+			</a>
+
+		</div>
+	</nav>
+</header>
+<style>
+	header {
+		height: 150px;
+		font-size: 14px;
+		z-index: 10;
+	}
+	nav#navbarHeader {
+			z-index: 10;
+	}
+	a#imgLogoTokyoLash {
+    display: flex;
+	}
+	h2 {
+		margin: 0;
+		font-size: 1em;
+	}
+
+	h2 a,
+	h2 a.active {
+		text-decoration: none;
+	}
+		#navbarHeader{
+		position: fixed;
+		width: -webkit-fill-available;
+		background-color: var(--tokyolash-rosa);
+	}
+	nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		align-items: center;
+		/* box-shadow: 0 2px 8px rgba(var(--black), 5%); */
+	}
+	nav a {
+		padding: 25px 10px;
+		color: var(--accent);
+		border-bottom: 4px solid transparent;
+		text-decoration: none;
+	}
+	nav a.active {
+		color: var(--accent-dark);
+		text-decoration: none;
+		/* border-bottom-color: var(--accent); */
+	}
+	a#navIco {
+			padding: 30px 0px;
+	}
+
+	.social-links,
+	.social-links a {
+		display: flex;
+	}
+	@media (max-width: 720px) {
+		.social-links {
+			display: none;
+		}
+	}
+</style>
