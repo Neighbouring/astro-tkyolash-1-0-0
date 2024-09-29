@@ -1,7 +1,7 @@
 export default function BtnWhatsAppJSX() {
   return (
     <div>
-      <a href="whatsapp://send?phone=0000000000" class="btnWhatsAppJSX">
+      <a href="whatsapp://send?phone=0000000000" className="btnWhatsAppJSX">
         <svg viewBox="0 0 32 32">
           <title>Fale pelo WhatsApp</title>
           <path
